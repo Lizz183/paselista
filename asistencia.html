@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Pase de Asistencia</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #23943f, #c9f5d8); width: 100%; height: 200px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      border-color: rgb(121, 194, 124);
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center; /* Alinea el texto en el centro */
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+      text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    select {
+      appearance: none;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="asistencia.php" method="post">
+    <h2>Registro de Pase de Asistencia</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="carrera">Carrera:</label>
+    <input type="text" id="carrera" name="carrera" required>
+
+    <label for="grado">Cuatrimestre:</label>
+    <input type="text" id="grado" name="grado" required>
+
+    <label for="duracion">Periodo académico:</label>
+    <input type="text" id="duracion" name="duracion" required>
+
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha" required>
+
+    <label for="motivo">Motivo de la inasistencia:</label>
+    <select id="motivo" name="motivo" required>
+      <option value="" disabled selected>Selecciona un motivo</option>
+      <option value="trabajo">Trabajo</option>
+      <option value="salud">Salud</option>
+      <option value="otros">Otros</option>
+    </select>
+
+    <button type="submit">Registrar Asistencia</button>
+  </form>
+
+</body>
+</html>
+
+

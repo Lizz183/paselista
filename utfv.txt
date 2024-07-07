@@ -1,0 +1,28 @@
+CREATE DATABASE registro;
+
+USE registro;
+
+CREATE TABLE asistencias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    carrera  varchar(100) not null,
+    grado varchar(50) not null,
+    duracion varchar(100) not null,
+    fecha DATE NOT NULL,
+    motivo VARCHAR(50) NOT NULL
+);
+
+create table usuarios(
+id int not null primary key auto_increment,
+usuario varchar(50) not null, 
+contrasena varchar(200)not null);
+
+insert into usuarios values(1,'admin','123');
+
+CREATE TABLE datos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    matricula INT NOT NULL,
+    correo VARCHAR(255) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL
+);

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background: linear-gradient(to right, #23943f, #c9f5d8); width: 100%; height: 200px;
+}
+
+.card-login{
+    background-color: #ffffff;
+    max-width: 370px;
+    padding: 40px 40px;
+    margin: 25px auto;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+    #check-buap-img {
+        border: none;
+        background: none;
+        padding: 0;
+    }
+    #check-buap-img img {
+        max-width: 100%; /* La imagen se ajustará al ancho del botón */
+        height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+        display: block; /* Para eliminar cualquier espacio adicional debajo de la imagen */
+    }
+    
+    .profile-img-card{
+        width: 100px;
+        height: 100px;
+        margin: 10px auto 10px;
+        display: block;
+        border-radius: 50%;
+    }
+
+    .form-login #inputEmail,
+    .form-login #inputPassword {
+        direction: ltr;
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    .form-login input[type=email],
+    .form-login input[type=password],
+    .form-login input[type=text],
+    .form-login button {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        z-index: 1;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .form-login .form-control:focus {
+        border-color: rgb(121, 194, 124);
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(121, 194, 124);
+    }
+    
+    .btn.btn-login {
+        background: linear-gradient(to right, #135016, #afeea9); border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; 
+        padding: 0px;
+        font-weight: 700;
+        font-size: 16px;
+        height: 38px;
+        border-radius: 10px;
+        border: none;
+        transition: all 0.218s;
+    }
+    .btn.btn-login:hover,
+    .btn.btn-login:active,
+    .btn.btn-login:focus {
+        background-color: #00B4E1;
+    }
+
+    .forgot-password {
+        color: rgb(104, 145, 162);
+    }
+    .forgot-password:hover,
+    .forgot-password:active,
+    .forgot-password:focus{
+        color: #002D4C;
+    }
+
+.card-signup{
+    background-color: #ffffff;
+    max-width: 600px;
+    padding: 20px 60px;
+    margin: 25px auto;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+    .card-signup img{
+        width: 200px;
+        align-self: center;
+    }
+
+.hide{
+    display:none
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Asistencias y Faltas</title>
+  <!-- Agregar enlaces a los archivos de Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    canvas {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registro de Asistencias y Faltas</h1>
+
+  <label for="nombre">Nombre del Estudiante:</label>
+  <input type="text" id="nombre">
+  <button onclick="registrarAsistencia()">Registrar Asistencia</button>
+  <button onclick="registrarFalta()">Registrar Falta</button>
+
+  <canvas id="graficoAsistenciasFaltas" width="400" height="200"></canvas>
+
+  <script>
+    // Variables para contabilizar asistencias y faltas
+    let asistencias = 0;
+    let faltas = 0;
+
+    // Funciones para registrar asistencias y faltas
+    function registrarAsistencia() {
+      asistencias++;
+      actualizarGrafico();
+    }
+
+    function registrarFalta() {
+      faltas++;
+      actualizarGrafico();
+    }
+
+    // Función para actualizar el gráfico
+    function actualizarGrafico() {
+      const ctx = document.getElementById('graficoAsistenciasFaltas').getContext('2d');
+
+      const data = {
+        labels: ['Asistencias', 'Faltas'],
+        datasets: [{
+          label: 'Registro de Asistencias y Faltas',
+          data: [asistencias, faltas],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(255, 99, 132, 0.2)'
+          ],
+          borderColor: [
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 99, 132, 1)'
+          ],
+          borderWidth: 1
+        }]
+      };
+
+      const options = {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      };
+
+      const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+      });
+    }
+  </script>
+</body>
+</html>
